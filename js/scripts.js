@@ -1,29 +1,28 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contact-form');
-    
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        if (name === '' || email === '' || message === '') {
-            alert('Todos los campos son obligatorios.');
-            return;
-        }
-
-        if (!validateEmail(email)) {
-            alert('Por favor, introduce un correo electrónico válido.');
-            return;
-        }
-
-        alert('Formulario enviado correctamente.');
-        form.reset();
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        targetElement.scrollIntoView({ behavior: 'smooth' });
     });
+});
 
-    function validateEmail(email) {
-        const re = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-        return re.test(String(email).toLowerCase());
-    }
+document.querySelectorAll('section').forEach(section => {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    observer.observe(section);
+});
+const headerOffset = 80; // Altura del header
+const elementPosition = targetElement.getBoundingClientRect().top;
+const offsetPosition = elementPosition - headerOffset;
+window.scrollBy({
+    top: offsetPosition,
+    behavior: 'smooth'
 });
