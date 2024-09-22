@@ -1,41 +1,140 @@
-body {
+/* General styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1));
-    background-size: cover;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #ccd6f6; /* Color de texto más claro */
+    background: linear-gradient(135deg, #0a192f, #020c1b); /* Fondo con gradiente oscuro */
+    display: flex;
+    height: 100vh;
+}
+
+/* Estructura general */
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    height: 100%; /* Altura completa para el contenedor */
 }
 
-.glass {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+.sidebar {
+    width: 50%; /* Ocupa la mitad izquierda */
     padding: 20px;
-    width: 300px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    text-align: center;
+    background: rgba(10, 25, 47, 0.9); /* Fondo oscuro para el sidebar */
+    color: #dde4e3;
+    position: fixed; /* Fijo en la parte izquierda */
+    height: 100%; /* Altura completa */
+    overflow-y: auto; /* Permite el scroll si hay contenido extra */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto */
 }
 
-.glass a {
-    display: block;
-    margin-top: 10px;
-    color: #fff;
+.sidebar h1 {
+    font-size: 3rem; /* Tamaño grande para tu nombre */
+    margin-bottom: 10px;
+}
+
+.sidebar p {
+    font-size: 1.25rem; /* Tamaño formal para la descripción */
+    margin-bottom: 20px;
+}
+
+/* Menu styles */
+.menu {
+    margin-top: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu a {
+    color: #333; /* Texto oscuro */
     text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s, background 0.3s; /* Transiciones de color y fondo */
 }
 
-.glass a:hover {
-    color: #ffcc00;
+.menu a:hover {
+    background: #bac9c6; /* Efecto hover con color verde */
+    color: #0a192f; /* Texto cambia a oscuro en hover */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+/* Main content styles */
+.main-content {
+    width: 50%; /* Ocupa la mitad derecha */
+    margin-left: 50%; /* Empuja el contenido a la derecha */
+    padding: 80px 20px 20px; /* Ajusta el padding superior para evitar que el contenido quede oculto detrás del header */
+    overflow-y: auto; /* Solo el contenido principal se puede desplazar */
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    color: #ecedee; /* Texto claro */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section h2 {
+    color: #64ffda; /* Color verde para los títulos */
+}
+
+/* Project card styles */
+.project {
+    margin: 20px 0;
+    padding: 20px;
+    background: transparent; /* Sin fondo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.project:hover {
+    transform: scale(1.05); /* Aumenta el efecto hover */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0a192f;
+    color: #ccd6f6;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Link styles */
+a {
+    color: #64ffda; /* Verde brillante para los enlaces */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ccd6f6; /* Cambia a color claro en hover */
 }
