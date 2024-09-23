@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <div class="light-effect"></div> <!-- Efecto de luz agregado -->
     <div class="container">
         <div class="sidebar">
             <h1>José Ortega</h1>
             <p>Estudiante Ingeniero en Sistemas</p>
             <p>Me apasiona el desarrollo de software ya sea web, como apps.</p>
+            
             <div class="menu">
                 <ul>
                     <li><a href="#about">Sobre mí</a></li>
@@ -19,49 +23,101 @@
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
             </div>
+        
+            <!-- Sección de Redes Sociales -->
+            <h3 style="margin-top: 40px;">Redes Sociales</h3>
+            <ul class="social-icons">
+                <li><a href="LINK_FACEBOOK" target="_blank"><i class="fa-brands fa-facebook social-icon"></i></a></li>
+                <li><a href="LINK_INSTAGRAM" target="_blank"><i class="fa-brands fa-instagram social-icon"></i></a></li>
+                <li><a href="mailto:joseortegahac@gmail.com"><i class="fa-regular fa-envelope social-icon"></i></a></li>
+                <li><a href="LINK_GITHUB" target="_blank"><i class="fa-brands fa-github social-icon"></i></a></li>
+                <li><a href="LINK_LINKEDIN" target="_blank"><i class="fa-brands fa-linkedin social-icon"></i></a></li>
+            </ul>
         </div>
+        
         <div class="main-content">
             <section id="about">
-                <h2>Sobre mí</h2>
-                <p>Soy José Ortega, un apasionado desarrollador web con experiencia en la creación de aplicaciones interactivas y atractivas. Actualmente, estoy cursando estudios en programación y diseño web, donde he adquirido habilidades en tecnologías como HTML, CSS, JavaScript y frameworks modernos.</p>
-                <p>Me encanta aprender y enfrentar nuevos desafíos. Siempre busco mejorar mis habilidades y mantenerme al día con las últimas tendencias en el desarrollo web.</p>
-                <h3>Habilidades</h3>
+                    <h2>Sobre mí</h2>
+                        <p>Hola, soy José Ortega, estudiante de Ingeniería en Sistemas en el Instituto Tecnológico Superior de Zonzolica, actualmente cursando mi tercer año. Desde que empecé mis estudios, he cultivado una profunda pasión por el desarrollo web, donde me he dedicado a aprender tanto en clase como de forma autodidacta.</p>
+                        <p>Me considero un desarrollador web entusiasta, con experiencia en la creación de aplicaciones interactivas y visualmente atractivas. A lo largo de mi formación, he adquirido habilidades en diversas tecnologías, incluyendo HTML, CSS y JavaScript, así como en frameworks modernos que potencian la creación de proyectos innovadores.</p>
+                        <p>Además, disfruto enfrentar nuevos desafíos y proyectos que me permitan seguir creciendo profesionalmente. Me encanta aprender y mantenerme al día con las últimas tendencias y mejores prácticas en el desarrollo web, lo que me permite adaptar mis habilidades a un entorno en constante evolución.</p>
+                        <p>Estoy emocionado por las oportunidades que el futuro me depara en el mundo del desarrollo y siempre estoy dispuesto a colaborar en proyectos que busquen impactar positivamente a la comunidad.</p>
+                    
+                 <h3>Habilidades</h3>
+                <h4>Lenguajes de Programación</h4>
                 <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Node.js</li>
-                    <li>Git</li>
+                    <li><i class="fa-brands fa-js-square"></i> JavaScript</li>
+                    <li><i class="fa-brands fa-python"></i> Python</li>
+                    <li><i class="fa-brands fa-java"></i> Java</li>
+                    <li><i class="fa-solid fa-code"></i> HTML</li>
+                    <li><i class="fa-solid fa-code"></i> CSS</li>
+                    <li><i class="fa-brands fa-dart"></i> Dart</li>
+                    <li><i class="fa-brands fa-mobile-alt"></i> Flutter</li>
+                </ul>
+
+                <h4>Análisis de Datos</h4>
+                <ul>
+                    <li><i class="fa-brands fa-hadoop"></i> Apache Hadoop</li>
+                    <li><i class="fa-solid fa-database"></i> MySQL</li>
+                </ul>
+            
+                <h4>Software y Herramientas</h4>
+                <ul>
+                    <li><i class="fa-brands fa-github"></i> GitHub</li>
+                    <li><i class="fa-solid fa-file-alt"></i> Markdown</li>
+                    <li><i class="fa-solid fa-database"></i> MySQL</li>
+                    <li><i class="fa-solid fa-code"></i> JSON</li>
+                    <li><i class="fa-brands fa-java"></i> IntelliJ IDEA</li>
+                </ul>
+            
+                <h4>IDEs</h4>
+                <ul>
+                    <li><i class="fa-solid fa-code"></i> Visual Studio Code</li>
+                    <li><i class="fa-brands fa-java"></i> IntelliJ IDEA</li>
+                </ul>
+            
+                <h4>Sistemas Operativos</h4>
+                <ul>
+                    <li><i class="fa-brands fa-windows"></i> Windows</li>
+                    <li><i class="fa-brands fa-linux"></i> Kali Linux</li>
                 </ul>
             </section>
+            
 
             <section id="projects">
                 <h2>Proyectos</h2>
+                
                 <div class="project">
-                    <h3>Proyecto 1</h3>
-                    <img src="ruta-a-tu-imagen1" alt="Imagen del Proyecto 1">
-                    <p>Descripción del proyecto 1. Este proyecto fue desarrollado utilizando HTML, CSS y JavaScript. El objetivo era crear una aplicación interactiva que permitiera a los usuarios...</p>
-                    <a href="link-a-tu-proyecto1" target="_blank">Ver Proyecto</a>
+                    <h3>Pagina de LOGIN</h3>
+                    <img src="img/login.png" alt="Imagen del Proyecto 1">
+                    <p>Una pagina de Login hecho con css, html, y js.</p>
+                    <a href="https://joseorteha.github.io/LOGIN/Login/" target="_blank">Ver Proyecto</a>
                 </div>
+            
                 <div class="project">
-                    <h3>Proyecto 2</h3>
-                    <img src="ruta-a-tu-imagen2" alt="Imagen del Proyecto 2">
-                    <p>Descripción del proyecto 2. En este proyecto, utilicé React y Node.js para desarrollar una aplicación web que...</p>
-                    <a href="link-a-tu-proyecto2" target="_blank">Ver Proyecto</a>
+                    <h3>Generador de contraseña</h3>
+                    <img src="img/contraseñas.png" alt="Imagen del Proyecto 2">
+                    <p>Una pagina que te genera tus contraseñas, \utilice Html, CSS y JS .</p>
+                    <a href="https://passworddgenerattor.netlify.app/" target="_blank">Ver Proyecto</a>
+                </div>
+            
+                <div class="project">
+                    <h3>Control de gastos</h3>
+                    <img src="img/gastos.png" alt="Imagen del Proyecto 3">
+                    <p>Control de Gastos Personal es una aplicación web que permite a los usuarios gestionar sus finanzas registrando ingresos y gasto.</p>
+                    <p>Ofrece visualizaciones intuitivas y análisis para ayudar a mejorar la salud financiera y tomar decisiones informadas</p>
+                    <a href="https://control-gastos-personal.netlify.app/" target="_blank">Ver Proyecto</a>
                 </div>
             </section>
+            
 
             <section id="contact">
                 <h2>Contacto</h2>
                 <p>Si deseas ponerte en contacto conmigo, no dudes en enviarme un correo electrónico:</p>
-                <p>Correo: <a href="mailto:joseortegahac@gmail.com">joseortegahac@gmail.com</a></p>
-                <h3>Redes Sociales</h3>
-                <ul>
-                    <li><a href="https://github.com/joseorteha" target="_blank">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/jose-ortega/" target="_blank">LinkedIn</a></li>
-                </ul>
+                <p>Correo: <a href="mailto:joseortegahac@gmail.com"><i class="fa-regular fa-envelope"></i> joseortegahac@gmail.com</a></p>
             </section>
+            
+            
             
             <footer>
                 <p>© 2024 José Ortega. Todos los derechos reservados.</p>
