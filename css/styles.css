@@ -178,6 +178,20 @@ a:hover {
 }
 
 /* Iconos de redes */
+#theme-toggle {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    outline: none; /* Sin contorno */
+    font-size: 2rem; /* Tamaño del ícono */
+    color: #333333; /* Color del ícono */
+    transition: color 0.3s; /* Suavizado del color */
+}
+
+#theme-toggle:hover {
+    color: #555555; /* Color al pasar el mouse */
+}
+
 .social-icons {
     display: flex;
     justify-content: center;
@@ -285,3 +299,27 @@ h3 {
         justify-content: center;
     }
 }
+/* Estilos para el modo claro */
+body.light-mode {
+    background: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+}
+
+.sidebar.light-mode {
+    background: #f0f0f0; /* Fondo claro para la barra lateral */
+    color: #333333; /* Texto oscuro */
+}
+
+.menu a.light-mode {
+    color: #007bff; /* Color de los enlaces en modo claro */
+}
+
+footer.light-mode {
+    background: #f0f0f0; /* Fondo claro para el pie de página */
+    color: #333333; /* Texto oscuro en el pie de página */
+}
+
+.project.light-mode {
+    background: #f9f9f9; /* Fondo claro para proyectos */
+}
+
