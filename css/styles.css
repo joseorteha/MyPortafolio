@@ -258,47 +258,74 @@ h3 {
     font-size: 1.5rem;
 }
 
-@media (min-width: 768px) {
-    .container {
-        flex-direction: row; /* Horizontal en pantallas grandes */
-    }
-
-    .sidebar {
-        width: 50%;
-        position: fixed;
-        height: 100%;
-    }
-
-    .main-content {
-        margin-left: 50%;
-        padding: 80px 20px 20px;
-    }
-
-    .project img {
-        max-width: 50%; /* Ajuste para pantallas más grandes */
-    }
-}
-
+/* Ajustes para pantalla pequeña (celulares y tablets verticales) */
 @media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+
     .sidebar {
         width: 100%;
         height: auto;
+        padding: 15px; /* Ajusta el padding para mejorar el espacio */
+        position: relative;
     }
 
     .main-content {
-        margin-left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 20px; /* Ajuste de padding para evitar espacios vacíos */
+    }
+
+    .menu ul {
+        flex-direction: column; /* Menú en columna para dispositivos pequeños */
+    }
+
+    .menu li {
+        margin: 5px 0; /* Espaciado entre los ítems */
     }
 
     #about ul {
-        flex-direction: column;
+        flex-direction: column; /* Habilidades en columna */
         align-items: center;
     }
 
     #about li {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* Ancho completo para cada ítem */
         justify-content: center;
     }
+
+    .project img {
+        max-width: 100%; /* Asegura que las imágenes no excedan el ancho de la pantalla */
+    }
 }
+
+/* Ajustes para tablets y pantallas medianas */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .sidebar {
+        width: 40%; /* Sidebar más estrecha */
+    }
+
+    .main-content {
+        width: 60%;
+        margin-left: 40%;
+    }
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 1024px) {
+    .sidebar {
+        width: 50%;
+        height: 100vh;
+    }
+
+    .main-content {
+        margin-left: 50%;
+    }
+}
+
+
+
 /* Estilos para el modo claro */
 body.light-mode {
     background: #ffffff; /* Fondo blanco */
